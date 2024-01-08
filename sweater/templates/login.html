@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block body %}
+<body>
+<div class="py-15 py-xl-20 d-flex flex-column container level-3 min-vh-100">
+
+    <div class="row align-items-center justify-content-center my-auto">
+        <div class="col-md-10 col-lg-8 col-xl-5">
+
+            <div class="card">
+                <div class="card-header bg-white text-center pb-0">
+                    <h5 class="fs-4 mb-1">Login</h5>
+
+                    {% with messages=get_flashed_messages() %}
+                    {% if messages %}
+                    <ul class=flashes>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+
+                    <div class="card-body bg-white">
+                        <form method="POST">
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" id="floatingInput" name="login">
+                                <label for="floatingInput">Login</label>
+                            </div>
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="floatingPassword" name="password"
+                                       value="">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                            <!-- Radio buttons for account type -->
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="roll" id="createAccount"
+                                       value="user">
+                                <label class="form-check-label" for="createAccount">
+                                    User
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="roll" id="joinAccount"
+                                       value="creator" required>
+                                <label class="form-check-label" for="joinAccount"  >
+                                    Creator account
+                                </label>
+                            </div>
+
+                            <div class="d-grid mb-2">
+                                <button type="submit"
+                                        class="u-active-palette-3-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-dialog-link u-font-raleway u-hover-palette-3-dark-1 u-palette-3-dark-3 u-radius-6 u-btn-2">
+                                    Login
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label small text-secondary" for="defaultCheck1">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col text-end">
+                                    <a href="/register" class="underline small">Forgot password?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer bg-opaque-black inverted text-center">
+                        <p class="text-secondary">Don't have an account yet? <a href="/register" class="underline">Register</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

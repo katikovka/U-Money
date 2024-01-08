@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Register</title>
+{% endblock %}
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page with Background Image Example</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/signin.css') }}">
+</head>
+
+
+<div class="py-15 py-xl-20 d-flex flex-column container level-3 min-vh-100">
+    <div class="row align-items-center justify-content-center my-auto">
+        <div class="col-md-10 col-lg-8 col-xl-5">
+
+            <div class="card">
+                <div class="card-header bg-white text-center pb-0">
+                    <h5 class="fs-4 mb-1">Register</h5>
+                </div>
+
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+
+                <div class="card-body bg-white">
+                    <form method="POST">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="floatingInput" name="login">
+                            <label for="floatingInput">Login</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="floatingInput_name" name="name">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="floatingPassword" name="password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="floatingRepeatPassword" name="re_password">
+                            <label for="floatingPassword">Repeat password</label>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button type="submit"
+                                    class="u-active-palette-3-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-dialog-link u-font-raleway u-hover-palette-3-dark-1 u-palette-3-dark-3 u-radius-6 u-btn-2">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+                <div class="card-header bg-white text-center pb-0">
+                    <h5 class="fs-5 mb-1">Мы используем файлы cookies.</h5>
+                    <h5 class="fs-5 mb-1">Отказаться от этого нельзя, просто знайте это.</h5>
+                </div>
+            </div>
+</div>
+
+{% endblock %}
+
+
+<script async="true" type="text/javascript"
+        src="https://www.googletagmanager.com/gtag/js?id=G-2BMVGTJJG1&amp;l=dataLayer&amp;cx=c"></script>
+<script async="true" type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-80520768-2" type="text/javascript"></script>
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-80520768-2');
+</script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8329113460419074"
+        crossorigin="anonymous" type="text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8329113460419074" data-ad-slot="2986786685"
+     data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="text/javascript">
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2BMVGTJJG1" type="text/javascript"></script>
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2BMVGTJJG1');
+</script>

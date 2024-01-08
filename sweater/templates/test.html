@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="10539,00 RUB, Доходы">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/Home.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/nicepage.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" href="{{ url_for('static', filename='jquery.js') }}"
+            defer=""></script>
+    <script class="u-script" type="text/javascript" href="{{ url_for('static', filename='nicepage.js') }}"
+            defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+
+    <style>.u-dialog-section-5 .u-dialog-1 {
+  width: 566px;
+  min-height: 625px;
+  margin: 60px auto;
+}
+
+.u-dialog-section-5 .u-container-layout-1 {
+  padding: 40px 30px;
+}
+
+.u-dialog-section-5 .u-text-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 9px auto 0;
+}
+
+.u-dialog-section-5 .u-text-2 {
+  font-weight: 400;
+  margin: 20px auto 0;
+}
+
+.u-dialog-section-5 .u-list-1 {
+  margin-top: 19px;
+  margin-bottom: 0;
+}
+
+.u-dialog-section-5 .u-repeater-1 {
+  min-height: 128px;
+  grid-auto-columns: calc(50% - 5px);
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+  grid-gap: 10px 10px;
+}
+
+.u-dialog-section-5 .u-container-layout-2 {
+  padding: 10px;
+}
+
+.u-dialog-section-5 .u-group-1 {
+  min-height: 108px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: auto;
+}
+
+.u-dialog-section-5 .u-container-layout-3 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-dialog-section-5 .u-text-3 {
+  font-weight: 400;
+  margin: 27px 0 0;
+}
+
+.u-dialog-section-5 .u-container-layout-4 {
+  padding: 10px;
+}
+
+.u-dialog-section-5 .u-group-2 {
+  min-height: 108px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: auto;
+}
+
+.u-dialog-section-5 .u-container-layout-5 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-dialog-section-5 .u-text-4 {
+  font-weight: 400;
+  margin: 27px 0 0;
+}
+
+.u-dialog-section-5 .u-container-layout-6 {
+  padding: 10px;
+}
+
+.u-dialog-section-5 .u-group-3 {
+  min-height: 108px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: auto;
+}
+
+.u-dialog-section-5 .u-container-layout-7 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-dialog-section-5 .u-text-5 {
+  font-weight: 400;
+  margin: 27px 0 0;
+}
+
+.u-dialog-section-5 .u-gallery-nav-1 {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-dialog-section-5 .u-gallery-nav-2 {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-dialog-section-5 .u-text-6 {
+  font-weight: 400;
+  margin: 16px auto 0;
+}
+
+.u-dialog-section-5 .u-group-4 {
+  min-height: 101px;
+  width: 421px;
+  height: auto;
+  margin: 21px auto 0;
+}
+
+.u-dialog-section-5 .u-container-layout-8 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.u-dialog-section-5 .u-text-7 {
+  font-weight: 400;
+  margin: 26px 25px 0;
+}
+
+.u-dialog-section-5 .u-btn-1 {
+  font-size: 1.25rem;
+  background-image: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 30px auto 0;
+  padding: 15px 65px;
+}
+
+.u-dialog-section-5 .u-icon-1 {
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: 17px;
+  position: absolute;
+  right: 16px;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-5 .u-text-1 {
+    margin-top: 9px;
+  }
+
+  .u-dialog-section-5 .u-repeater-1 {
+    grid-template-columns: repeat(2, calc(50% - 5px));
+  }
+
+  .u-dialog-section-5 .u-group-1 {
+    height: auto;
+  }
+
+  .u-dialog-section-5 .u-group-2 {
+    height: auto;
+  }
+
+  .u-dialog-section-5 .u-group-3 {
+    height: auto;
+  }
+
+  .u-dialog-section-5 .u-group-4 {
+    min-height: 101px;
+    height: auto;
+  }
+
+  .u-dialog-section-5 .u-text-7 {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-5 .u-container-layout-1 {
+    padding-bottom: 30px;
+  }
+
+  .u-dialog-section-5 .u-repeater-1 {
+    grid-auto-columns: calc(100% - 0px);
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 540px;
+  }
+
+  .u-dialog-section-5 .u-container-layout-1 {
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .u-dialog-section-5 .u-repeater-1 {
+    grid-auto-columns: 100%;
+  }
+
+  .u-dialog-section-5 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-dialog-section-5 .u-container-layout-5 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-dialog-section-5 .u-container-layout-7 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-dialog-section-5 .u-container-layout-8 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-5 .u-dialog-1 {
+    width: 340px;
+    height: auto;
+  }
+
+  .u-dialog-section-5 .u-container-layout-1 {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .u-dialog-section-5 .u-text-1 {
+    font-size: 2.125rem;
+  }
+
+  .u-dialog-section-5 .u-group-4 {
+    width: 320px;
+  }
+}
+    </style>
+</head>
+{% endblock %}
+
+{% block body %}
+
+<body data-path-to-root="./" class="u-body u-xl-mode" data-lang="ru">
+{% if session['data'].roll == 'creator' or session['data'].roll == 'active_user' %}
+<section class="u-clearfix u-container-align-left u-image u-section-1" id="carousel_c788" data-image-width="1980"
+         data-image-height="1832">
+
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1"
+                         data-animation-name="customAnimationIn" data-animation-duration="1000"
+                         data-animation-delay="250">
+                        <div class="u-container-layout u-container-layout-1">
+                            <div class="u-expanded-width u-list u-list-1">
+                                <div class="u-repeater u-repeater-1">
+                                    <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                                        <div class="u-container-layout u-similar-container u-container-layout-2">
+                                            {% if creator %}
+                                            <h3 class="u-custom-font u-font-raleway u-hover-feature u-text u-text-1">
+                                                Счёт пользователя {{ creator }}</h3>
+                                            {% endif %}
+                                            <div class="u-container-layout u-similar-container u-container-layout-2">
+                                            <h4 class="u-custom-font u-font-raleway u-hover-feature u-text u-text-1">
+                                                Привет, {{ name }}, Ваш баланс:</h4>
+                                            </div>
+                                            <h2 class="u-custom-font u-font-raleway u-hover-feature u-text u-text-1">
+                                                {{ amount }} RUB</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-3 justify-content-center lead fw-normal">
+                                {% if categories %}
+                                <form method="post" action="/update_balance">
+                                    <div class="col-7 mb-3 mt-3 mx-auto">
+                                        <Label for="dropdownList"
+                                               class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-3">Выберите
+                                            категорию</Label>
+
+                                        <select class="form-control" id="dropdownList" name="dropdownList">
+                                            {% if categories %}
+                                            {% for category in categories %}
+                                            <option name="categories" value="{{ category }}">{{ category }}</option>
+                                            {% endfor %}
+                                            {% endif %}
+                                        </select>
+
+                                    </div>
+                                    <div class="col-7 mb-3 mt-3 mx-auto">
+                                        <Label for="dropdownList"
+                                               class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-3">Введите
+                                            сумму</Label>
+                                        <input type="number" class="form-control" id="overhead" name="overhead" value=""
+                                               required>
+                                    </div>
+                                    <button onclick="getValue()" type="submit" name="action" value="income"
+                                            class="u-active-palette-3-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-dialog-link u-font-raleway u-hover-palette-3-dark-1 u-palette-3-dark-3 u-radius-6 u-btn-1">
+                                        Доходы
+                                    </button>
+                                    <button onclick="getValue()" type="submit" name="action" value="expenses"
+                                            class="u-active-palette-3-base u-border-none u-btn u-btn-round u-button-style u-custom-font u-dialog-link u-font-raleway u-hover-palette-3-dark-1 u-palette-3-dark-3 u-radius-6 u-btn-2">
+                                        Расходы
+                                    </button>
+
+                                </form>
+                                {% else %}
+                                <a href="https://warha.ru/img/meme/2023/af23231769f71e3c6283dac2945a89db.jpg"><Label
+                                        for="dropdownList"
+                                        class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-3">Для
+                                    того чтобы стать Успешным необходимо создать категории товаров</Label></a>
+                                {% endif %}
+                            </div>
+                            <div class="d-flex flex-column gap-4 justify-content-center lead fw-normal">
+                            <a href="/secret_key" class="nav-link u-custom-font u-font-raleway u-hover-feature u-text-1">Секретный ключ для подключения к счёту</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2"
+                         data-animation-name="customAnimationIn" data-animation-duration="1500"
+                         data-animation-delay="0">
+                        <div class="u-container-layout u-valign-top u-container-layout-3">
+                            <div class="u-expanded-width u-list u-list-2">
+                                <div class="u-repeater u-repeater-2">
+                                    <div class="u-container-style u-list-item u-repeater-item">
+                                        <div class="u-container-layout u-similar-container u-container-layout-5">
+                                            <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-5">История</h5>
+                                            <div class="u-container-layout u-similar-container u-container-layout-5">
+                                                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search"  method="GET" action="">
+                                                    <input type="search" class="form-control form-control text-bg" name="searchText" placeholder="Поиск..." aria-label="Search">
+                                                </form>
+                                            </div>
+
+                                            {% for event in history %}
+                                            {% if event.type == 'expenses' %}
+                                            <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-6">
+                                                &nbsp; {{ event.name }} потратил {{ event.money }}р на категорию "{{ event.name_transactions }}"
+                                                  {{ event.date }} </h5>
+                                            {% else %}
+                                            <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-6">
+                                                &nbsp;{{ event.name }} внёс {{ event.money }} на категорию "{{ event.name_transactions }}"
+                                                 {{ event.date }} </h5>
+                                            {% endif %}
+                                            <h5 class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-7">
+                                                &nbsp;== </h5>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="u-clearfix u-container-align-left u-image u-section-1" data-image-width="1980"
+         data-image-height="1832">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+            <div class="u-container-layout u-container-layout-1">
+                <form method="post" action="/join">
+                    <div class="col-7 mb-3 mt-3 mx-auto">
+                        <label for="account_id"
+                               class="u-align-left u-custom-font u-font-raleway u-text u-text-default u-text-3">Enter
+                            Account ID</label>
+                        <input type="text" class="form-control" id="account_id" name="key" required>
+                    </div>
+                    <button type="submit"
+                            class="u-btn u-btn-round u-button-style u-custom-font u-dialog-link u-font-raleway u-hover-palette-3-dark-1 u-palette-3-dark-3 u-radius-6 u-btn-1">
+                        Connect to Account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+</body>
+{% endblock %}
+</html>
